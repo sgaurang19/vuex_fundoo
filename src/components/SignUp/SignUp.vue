@@ -87,7 +87,7 @@
                         <div class="hide">&nbsp;</div>
                         <div class="half-input">
                     <button class="button1" @click="adduser1()"> Sign-up </button>
-                            
+                    
                         </div>
                     </div>
                 </div>
