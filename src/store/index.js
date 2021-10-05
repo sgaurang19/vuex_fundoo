@@ -1,4 +1,6 @@
 import { createStore } from 'vuex'
+import todos from './modules/todos.js'
+import signup from './modules/signup.js'
 
 export default createStore({
   state: {
@@ -8,5 +10,6 @@ export default createStore({
   actions: {
   },
   modules: {
+    todos, signup
   }
 })
