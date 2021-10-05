@@ -1,5 +1,10 @@
 # fundoo
 
+Branches:
+1. Master: Vuex Fundoo Project
+2. Registration: Google Signup Page
+3. Login: Google Login Page
+
 ## Project setup
 ```
 npm install
