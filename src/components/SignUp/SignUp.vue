@@ -4,32 +4,29 @@
             <div class="main-container">
                 
                 <div class="signup-form">
-                    <p class="logo-text">
-                        <span class="LT-blue">G</span>
+                    <!-- <p class="logo-text">
+                        <span class="LT-blue">F</span>
+                        <span class="LT-red">u</span>
+                        <span class="LT-yellow">n</span>
+                        <span class="LT-blue">d</span>
+                        <span class="LT-green">o</span>
                         <span class="LT-red">o</span>
-                        <span class="LT-yellow">o</span>
-                        <span class="LT-blue">g</span>
-                        <span class="LT-green">l</span>
-                        <span class="LT-red">e</span>
 
-                    </p>
-                   
-                    <h1>Create Your google account</h1>
+                    </p> -->
+                   <Logo />
+                    <h1>Create Your Fundoo account</h1>
                     <div class ="signup-input"> 
                         <div class="half-input">
-                             <input required='' type='text'>
-                            <label alt='First Name' placeholder='First Name'></label> 
+                            <Inputbox alt='First Name' placeholder='First Name' error="error"/>
                         </div>
                         <div class="hide">&nbsp;</div>
                         <div class="half-input">
-                            <input required='' type='text'>
-                            <label alt='Last Name' placeholder='Last Name'></label>
+                           <Inputbox alt='Last Name' placeholder='Last Name'/>
                         </div>
                     </div>
                     <div class ="signup-input"> 
                         <div style="width:100%">
-                             <input required='' type='text'>
-                            <label alt='Username' placeholder='Username'></label> 
+                             <Inputbox alt='Username' placeholder='Username'/> 
                             <!-- <p class="hint">You can use letters, numbers and peroids </p> -->
                         </div>
                     </div>
@@ -43,13 +40,11 @@
                     </div>
                     <div class ="signup-input"> 
                         <div class="half-input">
-                             <input required='' type='text'>
-                            <label alt='Password' placeholder='Password'></label> 
+                             <Inputbox alt='Password' placeholder='Password'/> 
                         </div>
                         <div class="hide">&nbsp;</div>
                         <div class="half-input">
-                            <input required='' type='text'>
-                            <label alt='Confirm' placeholder='Confirm'></label>
+                            <Inputbox alt='Confirm' placeholder='Confirm'/>
                         </div>
                     </div>
                     
@@ -93,7 +88,7 @@
                 </div>
                 <div class="logo-img-signup">
                     <img src="https://ssl.gstatic.com/accounts/signup/glif/account.svg" alt="" width="244" height="244" class="j9NuTc TrZEUc">
-                    <p class="logo-line">One account. All of Google <br> working for you.</p>
+                    <p class="logo-line">One account. All of Fundoo <br> working for you.</p>
                 </div>
             </div>
             

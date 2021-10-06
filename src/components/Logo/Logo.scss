@@ -1,0 +1,15 @@
+.logo-text{
+    font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+    .LT-blue{
+      color:#4285F4;
+    }
+    .LT-red{
+      color:#DB4437;
+    }
+    .LT-green{
+      color:#0F9D58;
+    }
+    .LT-yellow{
+      color:#F4B400;
+    }
+  }

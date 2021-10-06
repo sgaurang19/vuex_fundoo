@@ -5,7 +5,7 @@
                 
                 <div class="signup-form">
                     <div class="heading-center">
-                            <p class="logo-text">
+                            <!-- <p class="logo-text">
                             <span class="LT-blue">G</span>
                             <span class="LT-red">o</span>
                             <span class="LT-yellow">o</span>
@@ -14,27 +14,24 @@
                             <span class="LT-red">e</span>
 
                         </p>
-                        
+                         -->
+                         <Logo />
                         <h1>Sign in</h1>
-                        <p> Use your Google Account</p>
+                        <p> Use your Fundoo Account</p>
+                    </div>
+                     <div class ="signup-input"> 
+                        <div style="width:100%">
+                            <Inputbox alt='Username' placeholder='Username' error=""/>
+                           
+                        </div>
                     </div>
                     <div class ="signup-input"> 
                         <div style="width:100%">
-                             <input required='' type='text'>
-                            <label alt='Username' placeholder='Username'></label> 
-                            <!-- <p class="hint">You can use letters, numbers and peroids </p> -->
+                            <Inputbox alt='Password' placeholder='Password'/>
+                           
                         </div>
                     </div>
-                    <div class ="signup-input"> 
-                        <div style="width:100%">
-                             <input required='' type='text'>
-                            <label alt='Password' placeholder='Password'></label> 
-                            <!-- <p class="hint">You can use letters, numbers and peroids </p> -->
-                            <div class="half-input">
-                            <p class="bold-text"> Forgot email?</p>
-                        </div>
-                        </div>
-                    </div>
+                    
                     
                     <div class ="signup-input"> 
                         <div style="width:100%">
@@ -65,7 +62,7 @@
                         </div>
                         <div class="hide">&nbsp;</div>
                         <div class="half-input">
-                    <button class="button1" @click="adduser1()"> Sign-up </button>
+                    <button class="button1" @click="adduser1()"> Login </button>
                             
                         </div>
                     </div>
