@@ -12,7 +12,7 @@
                     </div>
                      <div class ="signup-input"> 
                         <div style="width:100%">
-                            <Inputbox alt='Username' placeholder='Username' error=""/>
+                            <Inputbox alt='Username' placeholder='Username' error="error" error_msg="required"/>
                            
                         </div>
                     </div>

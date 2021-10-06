@@ -35,7 +35,7 @@
                         
                         <div >&nbsp;</div>
                         <div class="half-input">
-                    <button class="button1" @click="adduser1()"> Next </button>
+                    <button class="button1" onclick= "location.href='http://localhost:8080/resetpassword'"> <!--<router-link to="/resetpassword">Next</router-link> --> Next </button>
                             
                         </div>
                     </div>
