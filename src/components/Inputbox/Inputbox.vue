@@ -1,7 +1,7 @@
 <template>
     <div class ="signup-input"> 
         <div style="width:100%">
-            <input :class="[error ? 'input-text' : '']" required='' type='text' >
+            <input :class="[error ? 'input-text' : '']" required='' :type="inputtype" >
             <label class="input-label" :alt="alt" :placeholder="placeholder"></label>
             <span id="error-msg" :class="[error ? 'error error-msg' : 'hide-error']"> {{msg}} required</span> 
         </div>

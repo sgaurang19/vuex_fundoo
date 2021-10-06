@@ -2,19 +2,19 @@
   <div class>
 
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
-    <Login />
+    <Forgetpass />
 
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import Login from '@/components/Login/Login.vue';
+import Forgetpass from '@/components/Forgetpass/Forgetpass.vue';
 
 export default {
-  name: 'login',
+  name: 'forgetpass',
   components: {
-    Login
+    Forgetpass
   }
 }
 </script>

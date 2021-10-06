@@ -40,11 +40,11 @@
                     </div>
                     <div class ="signup-input"> 
                         <div class="half-input">
-                             <Inputbox alt='Password' placeholder='Password'/> 
+                             <Inputbox inputtype="password" alt='Password' placeholder='Password'/> 
                         </div>
                         <div class="hide">&nbsp;</div>
                         <div class="half-input">
-                            <Inputbox alt='Confirm' placeholder='Confirm'/>
+                            <Inputbox inputtype="password" alt='Confirm' placeholder='Confirm'/>
                         </div>
                     </div>
                     
@@ -61,19 +61,7 @@
                             <!-- <p class="hint">You can use letters, numbers and peroids </p> -->
                         </div>
                     </div>
-                        <!-- <input type="text" class="half-input" v-model="userdata.fname" id="fname" placeholder="First Name">
-                <label alt='Placeholder' placeholder='Adaptive Placeholder'></label>
-
-                    <input type="text" class="half-input" v-model="userdata.lname" id="lname" placeholder="Last Name">
-
-                    <input type="text" class="full-input" v-model="userdata.username" id="username" placeholder="Username">
-                    <p class="hint">You can use letters, numbers and peroids </p>
-
-                    <input type="text" class="half-input" v-model="userdata.pass" id="pass" placeholder="Password">
-                    <input type="text" class="half-input" v-model="userdata.cpass" id="cpass" placeholder="Confirm Password">
-                    <input type="checkbox" id="showpass" name="showpass" value="showpass">
-                    <label for="showpass">Show Password</label><br>
-                    <p class="hint">Use 8 or more characters with a mix of letters, numbers &amp; symbols </p> -->
+                        
                     <br><br>
                     <div class ="signup-input1"> 
                         <div class="half-input">

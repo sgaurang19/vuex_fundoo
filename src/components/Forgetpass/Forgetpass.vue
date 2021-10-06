@@ -5,40 +5,18 @@
                 
                 <div class="signup-form">
                     <div class="heading-center">
-                        
                          <Logo />
-                        <h1>Sign in</h1>
-                        <p> Use your Fundoo Account</p>
+                        <h1>Find your email</h1>
+                        <p>Enter your phone number or recovery email</p>
                     </div>
                      <div class ="signup-input"> 
                         <div style="width:100%">
-                            <Inputbox alt='Username' placeholder='Username' error=""/>
+                            <Inputbox alt='Phone number or email' placeholder='Phone number or email' error=""/>
                            
                         </div>
                     </div>
-                    <div class ="signup-input"> 
-                        <div style="width:100%">
-                            <Inputbox inputtype="password" alt='Password' placeholder='Password'/>
-                           
-                        </div>
-                    </div>
-                    <div class ="signup-input"> 
-                        <div style="width:100%">
-                            <div class="half-input">
-                            <p class="bold-text"> <a><router-link to="/forgetpassword">Forget Password?</router-link></a></p>
-                        </div>
-                        </div>
-                    </div>
-                    
-                    <div class ="signup-input"> 
-                        <div style="width:100%">
-                            <p>Not your computer? Use Guest mode to sign in privately.</p>
-                            <!-- <p class="hint">You can use letters, numbers and peroids </p> -->
-                            <div class="half-input">
-                            <p class="bold-text"> Learn more</p>
-                        </div>
-                        </div>
-                    </div>
+                   
+                   
                         <!-- <input type="text" class="half-input" v-model="userdata.fname" id="fname" placeholder="First Name">
                 <label alt='Placeholder' placeholder='Adaptive Placeholder'></label>
 
@@ -54,12 +32,10 @@
                     <p class="hint">Use 8 or more characters with a mix of letters, numbers &amp; symbols </p> -->
                     <br><br>
                     <div class ="signup-input1"> 
+                        
+                        <div >&nbsp;</div>
                         <div class="half-input">
-                            <p class="bold-text"> <a><router-link to="/signup">Create account</router-link></a></p>
-                        </div>
-                        <div class="hide">&nbsp;</div>
-                        <div class="half-input">
-                    <button class="button1" @click="adduser1()"> Login </button>
+                    <button class="button1" @click="adduser1()"> Next </button>
                             
                         </div>
                     </div>
@@ -71,12 +47,12 @@
     </div>
 </template>
 
-<script type=" module" src="./Login.js">
+<script type=" module" src="./Forgetpass.js">
 // import axios from 'axios';
 
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-@import './Login.scss';
+@import './Forgetpass.scss';
 </style>

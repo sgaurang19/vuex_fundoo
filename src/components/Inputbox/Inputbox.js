@@ -17,7 +17,7 @@ export default {
         type: String,
         default: "name",
       },
-      type: {
+      inputtype: {
         type: String,
         default: "text",
       },
