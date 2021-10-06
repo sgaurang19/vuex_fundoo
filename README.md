@@ -4,7 +4,8 @@ Branches:
 1. Master: Vuex Fundoo Project
 2. Registration: Fundoo Signup Page
 3. Login: Fundoo Login Page
-4. Forget_Password: Forget password page
+4. Forget_password: Forget password page
+5. Reset_password: Reset password page
 
 ## Project setup
 ```
