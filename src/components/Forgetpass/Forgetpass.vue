@@ -11,8 +11,9 @@
                     </div>
                      <div class ="signup-input"> 
                         <div style="width:100%">
-                            <Inputbox alt='Phone number or email' placeholder='Phone number or email' error=""/>
-                           
+                           <Inputbox alt='Email or Mobile' placeholder='Email or Mobile' v-model:data.sync="state.user.username"  v-bind:error="v$.user.username.$error"/> 
+                            <span id="error-msg" v-if="v$.user.username.$error" class="error error-msg"> Email or Mobile {{v$.user.username.$errors[0].$message}}</span> 
+
                         </div>
                     </div>
                    
@@ -35,7 +36,7 @@
                         
                         <div >&nbsp;</div>
                         <div class="half-input">
-                    <button class="button1" onclick= "location.href='http://localhost:8080/resetpassword'"> <!--<router-link to="/resetpassword">Next</router-link> --> Next </button>
+                    <button class="button1" @click="forgetpassword()"> <!--<router-link to="/resetpassword">Next</router-link> --> Next </button>
                             
                         </div>
                     </div>

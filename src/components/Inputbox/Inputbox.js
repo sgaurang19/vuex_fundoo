@@ -13,6 +13,9 @@ export default {
         type: String,
         default: "",
       },
+      vm:{
+        type: String
+      },
       label: {
         type: String,
         default: "",
@@ -29,11 +32,20 @@ export default {
         type: String,
         default: " ",
       },
+      idofInput: {
+        type: String,
+        default: " ",
+      },
+      nameofInput: {
+        type: String,
+        default: " ",
+      },
     },
     data() {
       return {
         value: "",
         msg: this.placeholder,
+        inputData: this.data
       };
     },
   };

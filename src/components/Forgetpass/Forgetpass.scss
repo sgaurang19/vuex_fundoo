@@ -59,6 +59,7 @@
     
     
   }
+  
   .full-input{
     width: 100%;
     padding: 12px 20px;
@@ -97,7 +98,18 @@
       text-align: center;
   }
 }
-
+.error{
+  font-size: 10px;
+  padding-bottom: 20px;
+}
+.hide-error{
+  display: none;
+}
+.error-msg {
+    display: block;
+    color:#DB4437;
+  
+}
 @media screen and (max-width:768px) {
   .logo-img-signup{
     display: none;

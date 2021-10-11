@@ -10,15 +10,21 @@
                         <h1>Sign in</h1>
                         <p> Use your Fundoo Account</p>
                     </div>
+                    <form @submit.prevent="onSubmit">
                      <div class ="signup-input"> 
                         <div style="width:100%">
-                            <Inputbox alt='Username' placeholder='Username' error="error" error_msg="required"/>
-                           
+                            <Inputbox alt='Username' idofInput="username" nameofInput="username" placeholder='Username' v-model:data.sync="state.username"  v-bind:error="v$.username.$error" />
+                            <span id="error-msg" v-if="v$.username.$error" class="error error-msg"> Username {{v$.username.$errors[0].$message}}</span> 
+                            <span id="error-msg" v-else-if="!v$.username.$error" class="min-height">  &nbsp; </span> 
+
                         </div>
                     </div>
                     <div class ="signup-input"> 
                         <div style="width:100%">
-                            <Inputbox inputtype="password" alt='Password' placeholder='Password'/>
+                            <Inputbox inputtype="password" alt='Password' idofInput="password" nameofInput="password" placeholder='Password' v-model:data.sync="state.password" v-bind:error="v$.password.$error" error_msg="{{v$.password.$errors[0].$message}}"/>
+                            <span id="error-msg" v-if="v$.password.$error" class="error error-msg"> Password {{v$.password.$errors[0].$message}}</span> 
+                            <span id="error-msg" v-else-if="!v$.password.$error" class="min-height">  &nbsp; </span> 
+
                            
                         </div>
                     </div>
@@ -59,10 +65,11 @@
                         </div>
                         <div class="hide">&nbsp;</div>
                         <div class="half-input">
-                    <button class="button1" @click="adduser1()"> Login </button>
+                    <button class="button1" type="submit" @click="login()"> Login </button>
                             
                         </div>
                     </div>
+                    </form>
                 </div>
                
             </div>
