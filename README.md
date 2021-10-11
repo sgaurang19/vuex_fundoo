@@ -7,6 +7,8 @@ Branches:
 4. Forget_password: Forget password page
 5. Reset_password: Reset password page
 
+6. API-connection: Validation and API connection for signup, login, forget password and reset password
+
 ## Project setup
 ```
 npm install

@@ -1,0 +1,232 @@
+.main-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.header-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 90%;
+  height: 20vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  margin-bottom: 20px;
+}
+
+.header-logo {
+  height: 20%;
+  width: 10%;
+  padding-left: 30px;
+}
+
+.hidden-nav {
+  display: none;
+}
+
+.header-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding-top: 10px;
+  width: 40%;
+  font-family: Candara;
+  color: #fff;
+  font-weight: 500;
+}
+
+.header-nav a, .header-nav a > span {
+  position: relative;
+  color: inherit;
+  text-decoration: none;
+  line-height: 24px;
+}
+
+.header-nav a:before, .header-nav a:after, .header-nav a > span:before, .header-nav a > span:after {
+  content: '';
+  position: absolute;
+  -webkit-transition: -webkit-transform .3s ease;
+  transition: -webkit-transform .3s ease;
+  transition: transform .3s ease;
+  transition: transform .3s ease, -webkit-transform .3s ease;
+}
+
+.header-nav .hover-3 {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  overflow: hidden;
+}
+
+.header-nav .hover-3:before {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+.header-nav .hover-3:hover:before {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.header-nav a:active .hover-3:before,
+.header-nav .hover-3:hover:before {
+  left: 0;
+  line-height: 24px;
+  color: inherit;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+}
+
+@media screen and (max-width: 500px) {
+  .header-nav {
+    background: #121212;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    gap: 1rem;
+    -webkit-transition: top 1s;
+    transition: top 1s;
+    position: fixed;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    padding: 1rem;
+  }
+  .header-nav.is-toggled {
+    top: 0;
+  }
+  .header-nav:not(.is-toggled) {
+    top: -200vh;
+  }
+  .header-nav .nav-toggler {
+    display: block;
+  }
+}
+
+.navbar {
+  width: 40px;
+  display: block;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+}
+
+.navbar .two {
+  width: 25px;
+}
+
+.navbar .three {
+  width: 30px;
+}
+
+.header-nav.responsive {
+  position: relative;
+}
+
+.header-nav.responsive .icon {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.header-nav.responsive a {
+  float: none;
+  display: block;
+  text-align: left;
+}
+
+.navbar div {
+  height: 3px !important;
+  background: #fff;
+  margin: 2px 0px 2px 0px;
+  border-radius: 25px;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+}
+
+.navbar:hover div {
+  width: 40px;
+}
+
+.nav-toggler {
+  display: none;
+  background: inherit;
+  border: none;
+  outline: none;
+}
+
+.router-link {
+  color: #fff;
+}
+
+@media screen and (max-width: 500px) {
+  .header-logo {
+    height: 20%;
+    width: 50%;
+    padding-left: 30px;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .header-nav {
+    display: none;
+  }
+  .nav-toggler {
+    display: block;
+  }
+  .hidden-nav {
+    display: block;
+    width: 40px;
+    display: block;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+  }
+  .hidden-nav .two {
+    width: 25px;
+  }
+  .hidden-nav .three {
+    width: 30px;
+  }
+  .hidden-nav div {
+    height: 3px !important;
+    background: #fff;
+    margin: 2px 0px 2px 0px;
+    border-radius: 25px;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+  }
+}
+/*# sourceMappingURL=Header.css.map */

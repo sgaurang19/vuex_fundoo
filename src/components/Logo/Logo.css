@@ -1,0 +1,20 @@
+.logo-text {
+  font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+}
+
+.logo-text .LT-blue {
+  color: #4285F4;
+}
+
+.logo-text .LT-red {
+  color: #DB4437;
+}
+
+.logo-text .LT-green {
+  color: #0F9D58;
+}
+
+.logo-text .LT-yellow {
+  color: #F4B400;
+}
+/*# sourceMappingURL=Logo.css.map */
