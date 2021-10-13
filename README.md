@@ -9,6 +9,8 @@ Branches:
 
 6. API-connection: Validation and API connection for signup, login, forget password and reset password
 
+7. keep-Header: Header for Keep Dashboard
+
 ## Project setup
 ```
 npm install
