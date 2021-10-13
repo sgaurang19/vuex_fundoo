@@ -91,10 +91,7 @@
             </div>
             
         </div>
-        <md-snackbar :md-position="position" :md-duration="isInfinity ? Infinity : duration" v-model:data.sync="showSnackbar" md-persistent>
-            <span>Connection timeout. Showing limited messages!</span>
-            <md-button class="md-primary" @click="showSnackbar = false">Retry</md-button>
-        </md-snackbar>
+        
 
     </div>
 </template>

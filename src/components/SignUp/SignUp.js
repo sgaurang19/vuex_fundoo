@@ -1,12 +1,15 @@
 // import {mapActions} from 'vuex';
 // import Signup from '@/components/Addtodo.vue'
-import axios from 'axios';
+// import axios from 'axios';
 
 import Logo from '@/components/Logo/Logo.vue'
 import Inputbox from '@/components/Inputbox/Inputbox.vue'
+// import Snacks from '@/components/Snackbar/Snackbar.vue'
 import useVuelidate from '@vuelidate/core';
 import { required , alpha, email, minLength, sameAs, helpers} from '@vuelidate/validators';
 import { reactive, computed } from 'vue';
+import userService from '@/services/userServices';
+const us = new userService();
 
 export default {
     setup(){
@@ -86,11 +89,12 @@ export default {
                     "mobile": 1234567890,
                     "pass": this.state.user.password
                 }
-                axios.post("http://localhost:3001/users/register",sendingData).then(()=> {
-                    console.log("success");
+                us.signup(sendingData).then(()=>{
+                    alert("Account created successfully! please login");
+                    this.$router.push('/login')
                 }).catch(()=>{
-                    console.log("error");
-                })
+                    alert("Failed to create Account! please try again");
+                    console.log("Error");})
             }
             else{
                 // alert("error")

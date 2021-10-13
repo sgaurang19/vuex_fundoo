@@ -2,10 +2,15 @@
 // import Signup from '@/components/Addtodo.vue'
 import Logo from '@/components/Logo/Logo.vue'
 import Inputbox from '@/components/Inputbox/Inputbox.vue'
-import axios from 'axios';
+// import axios from 'axios';
 import useVuelidate from '@vuelidate/core';
 import { required , helpers, sameAs, minLength} from '@vuelidate/validators';
 import { reactive, computed } from 'vue';
+import userService from '@/services/userServices';
+const us = new userService();
+
+
+
 
 export default {
     setup(){
@@ -67,12 +72,13 @@ export default {
                 const headers = {
                     'x-auth-token': this.$route.params.token
                 }
-                axios.patch("http://localhost:3001/users/reset_password",sendingData,{headers}).then((resp)=> {
-                    console.log("success");
-                    console.log(resp.data);
-                }).catch(()=>{
-                    console.log("error");
-                })
+                us.resetpass(sendingData, headers).then(()=>{
+                    alert("password updated successfully! please login again");
+                    // location.href="http://localhost:8080/login";
+                    this.$router.push('/login')
+                }).catch((err)=>{console.log("Error"+err);})
+               
+                
                 
             }
             else{

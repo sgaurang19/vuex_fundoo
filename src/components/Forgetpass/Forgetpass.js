@@ -1,12 +1,16 @@
 // import {mapActions} from 'vuex';
 // import Signup from '@/components/Addtodo.vue'
-import axios from 'axios';
+// import axios from 'axios';
 
 import Logo from '@/components/Logo/Logo.vue'
 import Inputbox from '@/components/Inputbox/Inputbox.vue'
 import useVuelidate from '@vuelidate/core';
 import { required ,email, helpers} from '@vuelidate/validators';
 import { reactive, computed } from 'vue';
+import userService from '@/services/userServices';
+const us = new userService();
+
+
 
 
 export default {
@@ -67,13 +71,8 @@ export default {
                     // password: setPass
 
                 }
-                console.log(sendingData);
-                axios.post("http://localhost:3001/users/reset",sendingData).then(()=> {
-                    
-                    // window.location.href = "http://localhost:8080/resetpassword";
-                }).catch(()=>{
-                    console.log("error");
-                })
+                us.forgetpass(sendingData);
+                
             }
             else{
                 // alert("error")

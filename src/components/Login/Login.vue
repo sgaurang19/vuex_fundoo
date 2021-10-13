@@ -10,7 +10,7 @@
                         <h1>Sign in</h1>
                         <p> Use your Fundoo Account</p>
                     </div>
-                    <form @submit.prevent="onSubmit">
+                    <!-- <form @submit.prevent="onSubmit"> -->
                      <div class ="signup-input"> 
                         <div style="width:100%">
                             <Inputbox alt='Username' idofInput="username" nameofInput="username" placeholder='Username' v-model:data.sync="state.username"  v-bind:error="v$.username.$error" />
@@ -69,12 +69,13 @@
                             
                         </div>
                     </div>
-                    </form>
+                    <!-- </form> -->
                 </div>
                
             </div>
             
         </div>
+        <!-- <Snacks v-bind:msg = "Error" /> -->
     </div>
 </template>
 

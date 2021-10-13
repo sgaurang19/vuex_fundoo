@@ -2,6 +2,8 @@
 .outer-container{
   display: flex;
   justify-content: center;
+  padding-top: 10px;
+
 }
 
 .main-container{
@@ -33,6 +35,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    min-height: 10vh;
   }
   .signup-input1{
     display: flex;

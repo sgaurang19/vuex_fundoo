@@ -1,11 +1,16 @@
 // import {mapActions} from 'vuex';
 // import Signup from '@/components/Addtodo.vue'
-import axios from 'axios';
+// import axios from 'axios';
 import Logo from '@/components/Logo/Logo.vue'
 import Inputbox from '@/components/Inputbox/Inputbox.vue'
+// import Snacks from '@/components/Snackbar/Snackbar.vue'
 import useVuelidate from '@vuelidate/core';
 import { required , email, helpers} from '@vuelidate/validators';
 import { reactive, computed } from 'vue';
+import userService from '@/services/userServices';
+const us = new userService();
+// const userService = require('../../services/userServices')
+// import { mapActions } from 'vuex'
 
 export default {
     setup(){
@@ -30,21 +35,19 @@ export default {
     },
    
     components:{
-        Logo,Inputbox
+        Logo,Inputbox,
     },
     data(){
         // userdetails: [];
         return{
-            
-       
-            
-               
-          
+
         }
     },
    
     methods:{
-        login(){
+        // ...mapActions(["addNotification"]),
+         login(){
+
             this.v$.$validate()
             if(!this.v$.$error){
                 // alert("form submitted")
@@ -55,15 +58,33 @@ export default {
                     // password: setPass
 
                 }
-                axios.post("http://localhost:3001/users/login",sendingData).then((resp)=> {
-                    console.log("success");
-                    console.log(resp.data);
-                }).catch(()=>{
-                    console.log("error");
-                })
+                us.Login(sendingData).then((resp)=>{
+                    let newData ={}
+
+                    newData._TKN = resp.data.message
+                    var loginData = JSON.parse(localStorage.getItem("loginData"));
+                    
+                    loginData = [newData];
+    
+                    if(loginData != null){
+                        console.log("ente");
+                        this.$router.push('/keep')
+                    }
+                    else{
+                        // this.addNotification("Login failed")
+                        this.$router.push('/login')
+    
+                    }
+                    console.log("ls");
+                    localStorage.setItem("loginData", JSON.stringify(loginData));
+                    // this.$router.push('/keep')
+                    console.log("ls complete");
+                }).catch()
+
                 
             }
             else{
+                // this.addNotification("Login failed")
                 // alert("error")
             }
         }
