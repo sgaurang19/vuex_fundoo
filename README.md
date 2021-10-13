@@ -8,8 +8,11 @@ Branches:
 5. Reset_password: Reset password page
 
 6. API-connection: Validation and API connection for signup, login, forget password and reset password
+7. API-Integration: Code cleaning and refactored for API Integration
 
-7. keep-Header: Header for Keep Dashboard
+8. keep-Header: Header for Keep Dashboard
+9. side-Nav: Side Navigation bar for keep Dashboard
+
 
 ## Project setup
 ```
