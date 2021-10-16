@@ -3,7 +3,7 @@
 import con from './constants'
 import axios from 'axios';
 export default class notesServices{
-    getAllNotes(NotesData, headers){
+    getAllNotes(headers){
        return axios.post(con.ALL_NOTES,{headers});
     }
 //     signup(sendingData){
