@@ -1,6 +1,10 @@
 import { createStore } from 'vuex'
 import todos from './modules/todos.js'
 import signup from './modules/signup.js'
+import snackbar from './modules/Snackbar.js'
+import Menu from './modules/Menu.js'
+import Menusuccess from './modules/Menusucess.js'
+import Notes from './modules/Notes.js'
 
 
 export default createStore({
@@ -11,6 +15,6 @@ export default createStore({
   actions: {
   },
   modules: {
-    todos, signup
+    todos, signup, snackbar, Menu, Menusuccess, Notes
   }
 })

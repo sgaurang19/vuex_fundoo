@@ -15,8 +15,20 @@
 
   </div> -->
   <router-view/>
+  <Snackbar />
+  <Snackbarsuccess />
 </div>
 </template>
+<script>
+import Snackbar from '@/components/Snackbar/Snackbar.vue'
+import Snackbarsuccess from '@/components/Snackbarsuccess/Snackbarsuccess.vue'
+export default {
+  name: 'App',
+  components:{
+    Snackbar, Snackbarsuccess
+  }
+}
+</script>
 
 <style lang="scss">
 

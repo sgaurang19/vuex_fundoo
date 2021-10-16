@@ -1,5 +1,6 @@
 
 import Searchbox from '../Searchbox/Searchbox.vue'
+import { mapGetters, mapActions } from 'vuex'
 
 export default{
     name: 'DashboardHeader',
@@ -16,4 +17,13 @@ export default{
         
         }
     }
+    ,
+    computed: mapGetters(["returnSideNav"]),
+    methods: {
+        ...mapActions(["sideNavSwitch"]),
+        click_sideNavSwitch(){
+            this.sideNavSwitch();
+        }
+    }
+
 }

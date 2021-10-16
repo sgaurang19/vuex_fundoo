@@ -1,0 +1,22 @@
+.grid-notes{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 45px;
+    width: 70%;
+    height: absolute;
+    position: relative;
+    top: relative;
+    left: 20%;
+    opacity: 0.7;
+    z-index: 9;
+}
+.Notes{
+    
+    border: 1px solid grey;
+    box-shadow: 3px 3px 3px 3px #888888;
+    border-radius: 10px;
+    // border-radius: 20px;
+    padding: 10px;
+    min-height: 35vh;
+    text-align: justify;
+}

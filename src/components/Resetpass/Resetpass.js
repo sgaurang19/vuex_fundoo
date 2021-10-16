@@ -7,6 +7,8 @@ import useVuelidate from '@vuelidate/core';
 import { required , helpers, sameAs, minLength} from '@vuelidate/validators';
 import { reactive, computed } from 'vue';
 import userService from '@/services/userServices';
+import { mapActions } from 'vuex'
+
 const us = new userService();
 
 
@@ -57,6 +59,8 @@ export default {
     },
    
     methods:{
+        ...mapActions(["addNotificationsuccess"]),
+
         resetpass(){
             this.v$.$validate()
             if(!this.v$.$error){
@@ -73,7 +77,9 @@ export default {
                     'x-auth-token': this.$route.params.token
                 }
                 us.resetpass(sendingData, headers).then(()=>{
-                    alert("password updated successfully! please login again");
+                this.addNotificationsuccess("password updated successfully! please login again")
+
+                    // alert("password updated successfully! please login again");
                     // location.href="http://localhost:8080/login";
                     this.$router.push('/login')
                 }).catch((err)=>{console.log("Error"+err);})

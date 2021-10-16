@@ -2,7 +2,7 @@
 import { mapGetters, mapActions } from 'vuex'
 
 export default{
-    name: 'WarningBox',
+    name: 'Menu',
     computed: mapGetters(["returnMessages"]),
     methods: {
         ...mapActions(["removeNotification"]),

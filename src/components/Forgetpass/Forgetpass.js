@@ -8,6 +8,8 @@ import useVuelidate from '@vuelidate/core';
 import { required ,email, helpers} from '@vuelidate/validators';
 import { reactive, computed } from 'vue';
 import userService from '@/services/userServices';
+import { mapActions } from 'vuex'
+
 const us = new userService();
 
 
@@ -59,6 +61,7 @@ export default {
     },
    
     methods:{
+        ...mapActions(["addNotificationsuccess"]),
         forgetpassword(){
             this.v$.$validate()
             if(!this.v$.$error){
@@ -71,7 +74,12 @@ export default {
                     // password: setPass
 
                 }
-                us.forgetpass(sendingData);
+                us.forgetpass(sendingData).then(()=>{
+                this.addNotificationsuccess("Reset Password Link send to : " + sendingData.email)
+
+                }).catch(()=>{
+                    
+                });
                 
             }
             else{

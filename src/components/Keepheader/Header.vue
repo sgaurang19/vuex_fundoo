@@ -4,7 +4,9 @@
             <!-- keep logo -->
                 <div class="header-logo-div">
                     <div class="header-menu">
-                       <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+                        <button @click="click_sideNavSwitch()">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+                        </button>               
                     </div>
                     <div class="logo">
                         <div class="header-logo"><img src="../../assets/KeepNotes/275e8a5006e8d86852022e4c2a42cdab.jpg"></div><div><h1 class="header-logo-h1">Keep</h1></div>

@@ -26,7 +26,16 @@
 
   width: 100%;
 }
-.header-menu{}
+.header-menu{
+  button{
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+}
+}
 .header-logo{
   img{
     height: 5vh;

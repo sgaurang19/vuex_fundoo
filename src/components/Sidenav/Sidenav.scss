@@ -1,11 +1,11 @@
-.side-navigation-div{
+.side-navigation-div-half{
     display: flex;
     flex-direction: column;
-    width: 280px;
+    width: 5%;
     margin-top: 4px;
 }
 
-.routes{
+.routes-half{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -28,27 +28,28 @@
         padding: 0 12px;
     }
     span{
+        display: none;
         margin-left: 20px;
         font-size: 0.875rem;
         color: #000;
     }
 }
-.routes:hover{
+.routes-half:hover{
     background-color: #f1f3f4;
     transition: 0.2s ease-in-out;
 }
 
 
 
-.side-navigation-div1{
+.side-navigation-div-full{
     display: flex;
     flex-direction: column;
     width: 20%;
-    height: 100vh;
+    // height: 100vh;
     margin-top: 4px;
 }
 
-.routes1{
+.routes-full{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -59,7 +60,7 @@
     height: 48px;
     min-width: 48px;
     width: 100%;
-    border-radius: 25px 25px 25px 25px;
+    border-radius: 0px 25px 25px 0px;
     &.router-link-exact-active {
         background-color: #feefc3;
         pointer-events: none;
@@ -77,7 +78,7 @@
         color: #000;
     }
 }
-.routes1:hover{
+.routes-full:hover{
     background-color: #f1f3f4;
     transition: 0.2s ease-in-out;
 }

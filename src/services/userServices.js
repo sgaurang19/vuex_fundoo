@@ -10,12 +10,7 @@ export default class userServices{
         return axios.post("/users/register",sendingData)
     }
     forgetpass(sendingData){
-                axios.post("/users/reset",sendingData).then(()=> {
-                    
-                    // window.location.href = "http://localhost:8080/resetpassword";
-                }).catch(()=>{
-                    console.log("error");
-                })
+                return axios.post("/users/reset",sendingData)
     }
     resetpass(sendingData, headers){
        return axios.patch("/users/reset_password",sendingData,{headers})

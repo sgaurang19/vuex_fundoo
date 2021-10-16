@@ -10,7 +10,7 @@ import { reactive, computed } from 'vue';
 import userService from '@/services/userServices';
 const us = new userService();
 // const userService = require('../../services/userServices')
-// import { mapActions } from 'vuex'
+import { mapActions } from 'vuex'
 
 export default {
     setup(){
@@ -46,6 +46,7 @@ export default {
    
     methods:{
         // ...mapActions(["addNotification"]),
+        ...mapActions(["addNotification"]),
          login(){
 
             this.v$.$validate()
@@ -58,6 +59,7 @@ export default {
                     // password: setPass
 
                 }
+                try{
                 us.Login(sendingData).then((resp)=>{
                     let newData ={}
 
@@ -79,12 +81,22 @@ export default {
                     localStorage.setItem("loginData", JSON.stringify(loginData));
                     // this.$router.push('/keep')
                     console.log("ls complete");
-                }).catch()
+                }).catch(()=>{
+                    // alert("error")
+                    console.log("failed");
+                    this.addNotification("Login failed")
+
+                })
+                }
+                catch(err){
+                    console.log(err);
+                    this.addNotification("Login failed")
+                }
 
                 
             }
             else{
-                // this.addNotification("Login failed")
+                this.addNotification("Login failed")
                 // alert("error")
             }
         }
