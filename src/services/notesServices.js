@@ -17,4 +17,4 @@ export default class notesServices{
 
 //     }
 }
-module.exports ={notesServices};
+// module.exports ={notesServices};
