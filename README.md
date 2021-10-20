@@ -13,6 +13,7 @@ Branches:
 8. keep-Header: Header for Keep Dashboard
 9. side-Nav: Side Navigation bar for keep Dashboard
 
+10. ArchivedNote: added archived note function and view of archived notes
 
 ## Project setup
 ```
