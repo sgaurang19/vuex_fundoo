@@ -16,12 +16,12 @@
         </div>
     </div>
 </template>
-<script type=" module" src="./Notes.js">
+<script type=" module" src="./Archivednotes.js">
 // import axios from 'axios';
 
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-@import './Notes.scss';
+@import './Archivednotes.scss';
 </style>

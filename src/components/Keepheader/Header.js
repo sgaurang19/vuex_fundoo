@@ -9,13 +9,11 @@ export default{
     },
     mounted(){
         var loginData = JSON.parse(localStorage.getItem("loginData"));
-        if(loginData != null){
-            this.$router.push('/keep')
-        }
-        else{
+        if(loginData == null){
             this.$router.push('/login')
-        
+
         }
+        
     }
     ,
     computed: mapGetters(["returnSideNav"]),

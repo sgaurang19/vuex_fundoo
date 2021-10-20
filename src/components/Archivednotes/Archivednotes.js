@@ -25,12 +25,12 @@ export default {
       };
     },
     methods:{
-      ...mapActions(["getAll_Notes", "AddNOte"]),
+      ...mapActions(["ArchivedNotes"]),
       
 
     },
     created(){
-        this.getAll_Notes();
+        this.ArchivedNotes();
     },
     computed:
       mapGetters(["allNotes"]),

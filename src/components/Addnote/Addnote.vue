@@ -16,12 +16,18 @@
         </div>
         <div v-else class="create-note">
             <div class="pair">
-                <input type="text" placeholder="Title" autofocus>
+                
+                <input type="text" placeholder="Title" v-model="title" autofocus>
                 <button>
                     <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#444"><g><rect fill="none" height="24" width="24"/></g><g><path d="M14,4v5c0,1.12,0.37,2.16,1,3H9c0.65-0.86,1-1.9,1-3V4H14 M17,2H7C6.45,2,6,2.45,6,3c0,0.55,0.45,1,1,1c0,0,0,0,0,0l1,0v5 c0,1.66-1.34,3-3,3v2h5.97v7l1,1l1-1v-7H19v-2c0,0,0,0,0,0c-1.66,0-3-1.34-3-3V4l1,0c0,0,0,0,0,0c0.55,0,1-0.45,1-1 C18,2.45,17.55,2,17,2L17,2z"/></g></svg>
                 </button>
             </div>
-            <input type="text" placeholder="Take a note..." autofocus>
+            <!-- <span class="TextArea" role="textbox" contenteditable></span> -->
+              <div class="grow-wrap">
+    <textarea name="text" id="text" onInput="this.parentNode.dataset.replicatedValue = this.value"></textarea>
+  </div>
+            <textarea id="txtInput" class="TextArea" contenteditable placeholder="Take a note..." v-model="desc" autofocus></textarea>
+            <!-- <input type="text" placeholder="Take a note..." v-model="desc" autofocus> -->
             <div class="pair">
                  <button>
                         <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#5f6368"><path d="M10.01 21.01c0 1.1.89 1.99 1.99 1.99s1.99-.89 1.99-1.99h-3.98zM12 6c2.76 0 5 2.24 5 5v7H7v-7c0-2.76 2.24-5 5-5zm0-4.5c-.83 0-1.5.67-1.5 1.5v1.17C7.36 4.85 5 7.65 5 11v6l-2 2v1h18v-1l-2-2v-6c0-3.35-2.36-6.15-5.5-6.83V3c0-.83-.67-1.5-1.5-1.5zM13 8h-2v3H8v2h3v3h2v-3h3v-2h-3z"/></svg>
@@ -41,7 +47,7 @@
                     <button>
                         <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#5f6368"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/></svg>
                     </button>
-                <button class="close-button" @click="newNoteSwitch()">Close</button>
+                <button class="close-button" @click="newNote()">Close</button>
             </div>
         </div>
     </div>

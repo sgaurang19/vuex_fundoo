@@ -1,4 +1,4 @@
 const LOGIN = "/users/login"
-const ALL_NOTES = "/allnotes"
+const ALL_NOTES = "/users/notes/allnotes"
 
 module.exports={LOGIN, ALL_NOTES}
