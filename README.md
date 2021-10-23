@@ -14,6 +14,7 @@ Branches:
 9. side-Nav: Side Navigation bar for keep Dashboard
 
 10. ArchivedNote: added archived note function and view of archived notes
+11. TrashNotes: added Trash notes section
 
 ## Project setup
 ```
