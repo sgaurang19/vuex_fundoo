@@ -9,7 +9,7 @@
                         </button>               
                     </div>
                     <div class="logo">
-                        <div class="header-logo"><img src="../../assets/KeepNotes/275e8a5006e8d86852022e4c2a42cdab.jpg"></div><div><h1 class="header-logo-h1">Keep</h1></div>
+                        <div class="header-logo"><img src="../../assets/KeepNotes/275e8a5006e8d86852022e4c2a42cdab.jpg"></div><div><h1 class="header-logo-h1"> {{logo_text}}</h1></div>
                     </div>
                 </div>
                 

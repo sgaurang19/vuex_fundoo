@@ -11,6 +11,10 @@ export default {
       },
       Notes_text:{
           type: String
+      },
+      RouteName:{
+        type:String,
+        default: 'Archived'
       }
     },
     components:{

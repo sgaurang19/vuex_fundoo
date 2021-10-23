@@ -1,13 +1,19 @@
 import { mapActions } from "vuex";
 export default{
     name: 'NewNote',
+    props:{
+        color:{
+            type: String,
+            default: '#fff'
+        }
+    },
     data(){
         return{
             newNoteBoolean: true
         }
     },
     methods: {
-        ...mapActions( ["AddNOte"]),
+        ...mapActions( ["AddNOte"],),
         newNoteSwitch(){
             this.newNoteBoolean = !this.newNoteBoolean
         },
@@ -16,6 +22,7 @@ export default{
                 this.NewNote();
                 this.title="";
                 this.desc="";
+                this.color="#fff"
 
                 this.newNoteSwitch()
             }
@@ -24,15 +31,23 @@ export default{
 
             }
         },
+        changeColorNote(code){
+            this.color = code
+            console.log(this.color);
+        },
         NewNote(){
             
             const NoteData={
               "title" : this.title.toString(),
-              "desc" : this.desc.toString() 
+              "desc" : this.desc.toString() ,
+              "color" : this.color
             }
     
             this.AddNOte(NoteData)
           }
+    },
+    updated(){
+
     },
     components:{
         

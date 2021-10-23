@@ -7,7 +7,7 @@ import Forgetpassword from '../views/Forgetpassword.vue'
 import Resetpassword from '../views/Resetpassword.vue'
 import keep from '../views/keep.vue'
 import Archived from '../views/Archived.vue'
-
+import Deleted from '../views/Deleted.vue'
 
 // import Vue from 'vue'
 require('dotenv').config()
@@ -47,6 +47,11 @@ const routes = [
     path: '/Archived',
     name: 'archived',
     component: Archived
+  },
+  {
+    path: '/Trash',
+    name: 'Deleted',
+    component: Deleted
   },
   
 //   {

@@ -7,7 +7,7 @@ export default {
     props: {
       color: {
         type: String,
-        default: "#fff",
+        default: "#1A73E8",
       },
       Notes_text:{
           type: String
@@ -25,13 +25,12 @@ export default {
       };
     },
     methods:{
-      ...mapActions(["getAll_Notes", "AddNOte"]),
-      
+      ...mapActions(["DeletedNotes"]),
       
 
     },
     created(){
-        this.getAll_Notes();
+        this.DeletedNotes();
     },
     computed:
       mapGetters(["allNotes"]),

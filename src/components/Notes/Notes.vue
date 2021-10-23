@@ -3,9 +3,14 @@
         <div class="grid-notes" >
             <div class="Notes" v-for="notes in allNotes.slice().reverse()" :key="notes._id" :style="{backgroundColor :notes.color}">
                <!-- <p style="font-size:small" v-text="notes._id"></p> -->
-               <h3 v-text="notes.title" ></h3>
-                
-                <p v-text="notes.description"></p>
+               <div>
+                   <h3 v-text="notes.title" ></h3>
+                    <p v-text="notes.description"></p>
+               </div>
+                <div class="icons-empty">
+                    
+                    &nbsp;
+                </div>
                 <div class="icons">
                     
                      <Icons  v-bind:Noteid="notes._id"/>

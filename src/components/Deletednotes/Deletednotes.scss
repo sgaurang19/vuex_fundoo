@@ -18,15 +18,16 @@
     top: 35%;
 }
 .Notes{
-    
-    border: 0.5px solid rgb(218, 217, 217);
-    border-radius: 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    border: 0.5px solid rgb(218, 217, 217);
+    // box-shadow: 0.5px 0.5px 0.5px 0.5px #888888;
+    border-radius: 10px;
     // border-radius: 20px;
+
     padding: 10px;
-    min-height: 15vh;
+    min-height: 20vh;
     text-align: justify;
 }
 .Notes:hover{
@@ -69,5 +70,8 @@ p { word-break: break-all }
     .grid-notes{
         display: grid;
         grid-template-columns: repeat(1, 1fr);
+        left: 15%;
+
+        width: 85%;
     }
 }

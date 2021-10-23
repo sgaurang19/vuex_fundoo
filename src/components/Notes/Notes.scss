@@ -4,20 +4,24 @@
     gap: 20px;
     width: 75%;
     height: absolute;
-    position: relative;
+    position: fixed;
     top: absolute;
     left: 20%;
+    top: 35%;
     /* opacity: 0.7; */
     z-index: 9;
 }
 .Notes{
-    
-    border: 1px solid grey;
-    box-shadow: 0.5px 0.5px 0.5px 0.5px #888888;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 0.5px solid rgb(218, 217, 217);
+    // box-shadow: 0.5px 0.5px 0.5px 0.5px #888888;
     border-radius: 10px;
     // border-radius: 20px;
+
     padding: 10px;
-    min-height: 15vh;
+    min-height: 20vh;
     text-align: justify;
 }
 .Notes:hover{
@@ -25,10 +29,17 @@
     .icons{
         display: block;
     }
+    .icons-empty{
+        display: none;
+    }
+}
+.icons-empty{
+    display: block;
 }
 .icons{
     display: none;
 }
+p { word-break: break-all }
 @media screen and (max-width:1200px) {
     .grid-notes{
         display: grid;
@@ -53,5 +64,8 @@
     .grid-notes{
         display: grid;
         grid-template-columns: repeat(1, 1fr);
+        left: 15%;
+
+        width: 85%;
     }
 }
